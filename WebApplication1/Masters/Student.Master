@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Student.master.cs" Inherits="WebApplication1.Masters.Student" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Student Grade Management</title>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="../Folder1/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Our Custom CSS -->
+    <link href="../Folder1/StyleSheet2.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Student Score Management</h3>
+                <strong>SSM</strong>
+            </div>
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="../StdPageForms/StdAnnouncementList.aspx">
+                        <i class="glyphicon glyphicon-volume-up"></i>
+                        Announcements
+                    </a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-ok"></i>
+                        Scores
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li><a href="../StdPageForms/StdScoreList.aspx">Score List</a></li>
+                    </ul>
+                </li>
+                <li class="active">
+                    <a href="#pageSubmenu3" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-envelope"></i>
+                        Messages
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu3">
+                        <li><a href="../StdPageForms/ThcMessageList.aspx">Teacher's Message List</a></li>
+                        <li><a href="../StdPageForms/StdMessageList.aspx">Student's Message List</a></li>
+                        <li><a href="../StdPageForms/StsSendMessage.aspx">Send Message</a></li>
+                    </ul>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-open"></i>
+                            Logout
+                        </a>
+                    </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li><a href="https://github.com/ParanovaFactory" class="download">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/sad%C4%B1k-berkay-karaduman-7407621a7/" class="article">LinkedIn</a></li>
+            </ul>
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+
+                    <div class="navbar-header">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                            <i class="glyphicon glyphicon-align-left"></i>
+                            <span>Student Score Management</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </div>
+
+    <!-- jQuery CDN -->
+    <script src="../Folder1/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="../Folder1/js-bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
