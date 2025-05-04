@@ -18,7 +18,7 @@ A web-based **School Management System** built using **ASP.NET MVC**. This appli
 - **Language**: C#
 - **Database**: SQL Server
 - **Authentication**: ASP.NET Identity
-- **Frontend**: HTML, CSS, JavaScript (jQuery for dynamic interactions)
+- **Frontend**: Ready to use template
 - **IDE**: Visual Studio 2022
 - **Version Control**: Git, GitHub
 
